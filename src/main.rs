@@ -1,3 +1,11 @@
+use http::Method;
+use http::Request;
+use server::Server;
+
+mod http;
+mod server;
+
 fn main() {
-    println!("Hello, world!");
+    let server = Server::new("127.0.0.1:7749".to_string());
+    server.run();
 }
